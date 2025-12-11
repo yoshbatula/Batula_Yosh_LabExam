@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN FORM</title>
     <link rel="stylesheet" href="css/output.css">
+    <link rel="icon" href="">
 </head>
 <body class="bg-black">
     <h1 class="text-white text-center items-center">HELLO WORLD!</h1>
