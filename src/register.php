@@ -20,21 +20,17 @@
     <!-- Main Content -->
     <div class="relative z-10 flex flex-col lg:flex-row items-center justify-center gap-12 h-screen px-4">
         
-        <div class="text-center lg:text-left transform translate-x-[-85px]">
+        <div class="text-center lg:text-left transform translate-x-[-90px]">
             <h1 class="text-[68px] text-white font-bold leading-tight font-inria">COLLEGE OF COMPUTING</h1>
             <h1 class="text-[68px] text-white font-bold leading-tight font-inria">EDUCATION</h1>
         </div>
         
         <!-- Login Form -->
         <div class="bg-black bg-opacity-40 rounded-lg shadow-lg p-8 w-full max-w-md h-130">
-            <form action="process_login.php" method="POST" class="flex flex-col">
+            <form action="process_register.php" method="POST" class="flex flex-col">
                 <img src="../images/CCE-LOGO.svg" alt="CCE LOGO" class="items-center mx-auto mb-6 w-24 h-24">
-                <h1 class="text-white text-3xl font-semibold mb-6 text-center">Welcome Back Trojans</h1>
+                <h1 class="text-white text-3xl font-semibold mb-6 text-center">Create an Account</h1>
 
-                <div class="flex flex-row gap-2 justify-center mb-4">
-                    <span class="text-white">Don’t have account yet?</span>
-                    <a href="register.php" class="underline text-white font-bold">Sign-up</a>
-                </div>
                 <label for="username" class="mb-2 font-semibold text-gray-200">Username</label>
                 <input type="text" id="username" name="username" required class="mb-4 p-2 bg-black bg-opacity-30 text-white border border-gray-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400">
                 
