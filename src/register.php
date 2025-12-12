@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN FORM</title>
+    <title>REGISTRATION FORM</title>
     <link rel="stylesheet" href="css/output.css">
     <link rel="icon" href="../images/CCE-LOGO.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,23 +20,29 @@
     <!-- Main Content -->
     <div class="relative z-10 flex flex-col lg:flex-row items-center justify-center gap-12 h-screen px-4">
         
-        <div class="text-center lg:text-left transform translate-x-[-90px]">
+        <div class="text-center lg:text-left transform translate-x-[-85px]">
             <h1 class="text-[68px] text-white font-bold leading-tight font-inria">COLLEGE OF COMPUTING</h1>
             <h1 class="text-[68px] text-white font-bold leading-tight font-inria">EDUCATION</h1>
         </div>
         
         <!-- Login Form -->
         <div class="bg-black bg-opacity-40 rounded-lg shadow-lg p-8 w-full max-w-md h-130">
-            <form action="process_register.php" method="POST" class="flex flex-col">
+            <form action="../Controllers/registration-process.php" method="POST" class="flex flex-col">
                 <img src="../images/CCE-LOGO.svg" alt="CCE LOGO" class="items-center mx-auto mb-6 w-24 h-24">
                 <h1 class="text-white text-3xl font-semibold mb-6 text-center">Create an Account</h1>
 
+                <label for="fullname" class="mb-2 font-semibold text-gray-200">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required class="mb-4 p-2 bg-black bg-opacity-30 text-white border border-gray-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400">
+                
+                <label for="email" class="mb-2 font-semibold text-gray-200">Email</label>
+                <input type="email" id="email" name="email" required class="mb-6 p-2 bg-black bg-opacity-30 text-white border border-gray-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+
                 <label for="username" class="mb-2 font-semibold text-gray-200">Username</label>
-                <input type="text" id="username" name="username" required class="mb-4 p-2 bg-black bg-opacity-30 text-white border border-gray-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400">
+                <input type="text" id="username" name="username" required class="mb-6 p-2 bg-black bg-opacity-30 text-white border border-gray-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
                 
                 <label for="password" class="mb-2 font-semibold text-gray-200">Password</label>
                 <input type="password" id="password" name="password" required class="mb-6 p-2 bg-black bg-opacity-30 text-white border border-gray-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-                
+
                 <button type="submit" class="bg-[#FFB600] text-black font-bold py-2 rounded">LOGIN</button>
             </form>
         </div>
