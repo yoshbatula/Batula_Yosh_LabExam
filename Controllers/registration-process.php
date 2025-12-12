@@ -19,7 +19,7 @@ class Registration_process {
     private array $accounts = [];
 
     public function register($fullname, $email, $username, $password) {
-        // Check if username already exists
+        
         foreach ($this->accounts as $account) {
             if ($account->username === $username) {
                 return false;

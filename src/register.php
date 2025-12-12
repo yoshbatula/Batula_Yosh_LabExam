@@ -31,6 +31,16 @@
                 <img src="../images/CCE-LOGO.svg" alt="CCE LOGO" class="items-center mx-auto mb-6 w-24 h-24">
                 <h1 class="text-white text-3xl font-semibold mb-6 text-center">Create an Account</h1>
 
+                <?php if(isset($_GET['error'])): ?>
+                    <div class="bg-red-500 bg-opacity-80 text-white p-3 rounded mb-4 text-center">
+                        <?php 
+                            if($_GET['error'] == 'empty_fields') echo 'Please fill all fields!';
+                            elseif($_GET['error'] == 'username_exists') echo 'Username already exists!';
+                            else echo 'Registration failed!';
+                        ?>
+                    </div>
+                <?php endif; ?>
+
                 <label for="fullname" class="mb-2 font-semibold text-gray-200">Full Name</label>
                 <input type="text" id="fullname" name="fullname" required class="mb-4 p-2 bg-black bg-opacity-30 text-white border border-gray-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400">
                 
@@ -43,7 +53,7 @@
                 <label for="password" class="mb-2 font-semibold text-gray-200">Password</label>
                 <input type="password" id="password" name="password" required class="mb-6 p-2 bg-black bg-opacity-30 text-white border border-gray-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
 
-                <button type="submit" class="bg-[#FFB600] text-black font-bold py-2 rounded">LOGIN</button>
+                <button type="submit" class="bg-[#FFB600] text-black font-bold py-2 rounded">REGISTER</button>
             </form>
         </div>
     </div>
