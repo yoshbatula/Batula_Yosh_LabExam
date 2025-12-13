@@ -30,7 +30,7 @@
         <div class="bg-black bg-opacity-40 rounded-lg shadow-lg p-8 w-full max-w-md h-130">
             <form action="../Controllers/login-process.php" method="POST" class="flex flex-col">
                 <img src="../images/CCE-LOGO.svg" alt="CCE LOGO" class="items-center mx-auto mb-6 w-24 h-24">
-                <h1 class="text-white text-3xl font-semibold mb-6 text-center">Welcome Back Trojans</h1>
+                <h1 class="text-white text-3xl font-semibold mb-6 text-center">Welcome Trojans!</h1>
                 <?php if(isset($_GET['success']) && $_GET['success'] == 'registered'): ?>
                     <div id="successMessage" class="bg-green-500 bg-opacity-80 text-white p-3 rounded mb-4 text-center font-semibold transition-opacity duration-500">
                         Registration successful! Please login.
