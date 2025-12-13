@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
     
     if (empty($fullname) || empty($email) || empty($username) || empty($password)) {
-        header('Location: ../src/register.php?error=empty_fields');
+        header('Location: ../register.php?error=empty_fields');
         exit();
     }
     
@@ -62,10 +62,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'password' => $password
         ];
         
-        header('Location: ../src/login.php?success=registered');
+        header('Location: ../index.php?success=registered');
         exit();
     } else {
-        header('Location: ../src/register.php?error=username_exists');
+        header('Location: ../register.php?error=username_exists');
         exit();
     }
 }

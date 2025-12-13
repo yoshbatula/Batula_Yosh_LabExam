@@ -3,7 +3,7 @@ session_start();
 
 // Check if user is logged in
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
-    header('Location: login.php');
+    header('Location: index.php');
     exit();
 }
 
@@ -16,15 +16,15 @@ $username = $_SESSION['username'] ?? '';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME PAGE</title>
-    <link rel="stylesheet" href="css/output.css">
-    <link rel="icon" href="../images/CCE-LOGO.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="src/css/output.css">
+    <link rel="icon" href="images/CCE-LOGO.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body class="relative min-h-screen">
     <!-- Background Image -->
-    <img src="../images/CCE-BACKGROUND.png" alt="Background Image" class="w-full h-full object-cover fixed -z-10">
+    <img src="images/CCE-BACKGROUND.png" alt="Background Image" class="w-full h-full object-cover fixed -z-10">
     
     <!-- Dark Overlay -->
     <div class="fixed inset-0 bg-black bg-opacity-70 -z-5"></div>
@@ -34,7 +34,7 @@ $username = $_SESSION['username'] ?? '';
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <img src="../images/CCE-LOGO.svg" alt="Logo" class="h-10 w-10">
+                    <img src="images/CCE-LOGO.svg" alt="Logo" class="h-10 w-10">
                     <span class="ml-3 text-xl font-bold text-white font-inria">Dashboard</span>
                 </div>
                 <div class="flex items-center space-x-4">
@@ -47,7 +47,7 @@ $username = $_SESSION['username'] ?? '';
                             <p class="text-xs text-gray-300">@<?php echo htmlspecialchars($username); ?></p>
                         </div>
                     </div>
-                    <a href="login.php?logout=true" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition duration-200">
+                    <a href="index.php?logout=true" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition duration-200">
                         Logout
                     </a>
                 </div>

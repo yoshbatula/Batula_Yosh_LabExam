@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     
     if (empty($username) || empty($password)) {
-        header('Location: ../src/login.php?error=empty_fields');
+        header('Location: ../index.php?error=empty_fields');
         exit();
     }
     
@@ -43,10 +43,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['username'] = $username;
         $_SESSION['fullname'] = $user['fullname'];
         
-        header('Location: ../src/home-page.php');
+        header('Location: ../home-page.php');
         exit();
     } else {
-        header('Location: ../src/login.php?error=invalid_credentials');
+        header('Location: ../index.php?error=invalid_credentials');
         exit();
     }
 }

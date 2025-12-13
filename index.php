@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN FORM</title>
-    <link rel="stylesheet" href="css/output.css">
-    <link rel="icon" href="../images/CCE-LOGO.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="src/css/output.css">
+    <link rel="icon" href="images/CCE-LOGO.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Background Image -->
-    <img src="../images/CCE-BACKGROUND.png" alt="Background Image" class="w-full h-full object-cover fixed -z-10">
+    <img src="images/CCE-BACKGROUND.png" alt="Background Image" class="w-full h-full object-cover fixed -z-10">
     
     <!-- Dark Overlay -->
     <div class="fixed inset-0 bg-black bg-opacity-60 -z-5"></div>
@@ -28,8 +28,8 @@
         
         <!-- Login Form -->
         <div class="bg-black bg-opacity-40 rounded-lg shadow-lg p-8 w-full max-w-md h-130">
-            <form action="../Controllers/login-process.php" method="POST" class="flex flex-col">
-                <img src="../images/CCE-LOGO.svg" alt="CCE LOGO" class="items-center mx-auto mb-6 w-24 h-24">
+            <form action="Controllers/login-process.php" method="POST" class="flex flex-col">
+                <img src="images/CCE-LOGO.svg" alt="CCE LOGO" class="items-center mx-auto mb-6 w-24 h-24">
                 <h1 class="text-white text-3xl font-semibold mb-6 text-center">Welcome Trojans!</h1>
                 <?php if(isset($_GET['success']) && $_GET['success'] == 'registered'): ?>
                     <div id="successMessage" class="bg-green-500 bg-opacity-80 text-white p-3 rounded mb-4 text-center font-semibold transition-opacity duration-500">
