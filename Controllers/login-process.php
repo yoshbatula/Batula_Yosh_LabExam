@@ -3,6 +3,7 @@
 session_start();
 
 class LoginProcess {
+
     private array $accounts = [];
 
     public function __construct($accounts) {
